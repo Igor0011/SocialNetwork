@@ -1,0 +1,48 @@
+/* Basic styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Explosion styles */
+.explosion {
+    width: 1000px;
+    height: 1000px;
+    background-color: #ff5733;
+    border-radius: 50%;
+    position: absolute;
+    display: none; /* Hide initially */
+    animation: none;
+    transform-origin: center;
+    /* overflow: hidden; */
+}
+
+/* Explosion animation */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2.5);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
